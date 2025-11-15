@@ -1,81 +1,57 @@
-#🌐 Transformer-Based English ↔ French Translation Model (Custom NLP Project)
+# 🌐 **Transformer-Based English ↔ French Translation Model **
 
-A fully custom translation system built from scratch using a causal Transformer architecture.
+A fully custom machine translation system built **from scratch** using a **causal Transformer architecture** in PyTorch.  
+Supports **English → French** and **French → English** translation with **93% accuracy** (BLEU-based).
 
-🔥 Overview
+---
 
-This project implements a complete machine translation model using a custom-built Transformer (encoder–decoder) architecture in PyTorch.
-The goal was to build the entire workflow manually — without relying on pre-trained translation models — to deeply understand modern NLP sequence-to-sequence systems.
+## 🔥 **Project Overview**
 
-The model supports:
+This project implements a complete **sequence-to-sequence translation model** without using any pre-trained translation models.  
+All components — from **tokenization** to **Transformer architecture**, **autoregressive decoding**, and **inference pipeline** — were designed manually.
 
-English → French translation
+The model generates **fluent, context-aware translations** in both directions.
 
-French → English translation
+---
 
-It achieves 93% translation accuracy (BLEU-based) for English → French and generates fluent, context-aware output.
+## 🚀 **Key Features**
 
-🚀 Key Features
-🔹 1. Fully Custom Transformer Architecture
+### **1. Fully Custom Transformer Architecture**
+Implemented from scratch:
+- Multi-Head Self-Attention  
+- Cross-Attention  
+- Positional Encoding  
+- Causal/Autoregressive Masks  
+- Encoder & Decoder Blocks  
+- Residual Connections + LayerNorm  
 
-Implemented from scratch using PyTorch, including:
+---
 
-Multi-Head Self-Attention
+### **2. End-to-End Translation Pipeline**
+**Data Preprocessing**
+- Sentence normalization  
+- Cleaning noisy pairs  
+- Removing inconsistent text  
 
-Encoder & Decoder blocks
+**Tokenization**
+- Subword/BPE tokenization  
+- Separate English & French vocabularies  
+- Padding & attention masks  
 
-Cross-Attention
+**Training Workflow**
+- Teacher forcing  
+- AdamW optimizer  
+- Learning rate warmup  
+- BLEU evaluation  
 
-Positional Encoding
 
-Causal (autoregressive) masking
+### **3. Real-Time Translation Application**
+A simple interactive app for:
+- **English → French translation**    
 
-Residual & LayerNorm connections
+Includes preprocessing, model inference, and autoregressive decoding.
 
-Beam Search & Greedy Decoding
 
-🔹 2. End-to-End Translation Pipeline
-
-The project includes the full lifecycle:
-
-✔ Data Preprocessing
-
-Text normalization
-
-Cleaning noisy sentence pairs
-
-Removing inconsistencies
-
-✔ Tokenization
-
-Subword tokenization (BPE / SentencePiece)
-
-Vocabulary building for both English & French
-
-Padding & attention masking
-
-✔ Training
-
-Teacher forcing
-
-AdamW optimizer
-
-Learning rate warmup schedule
-
-Loss tracking + BLEU evaluation
-
-🔹 3. Real-Time Translation Application
-
-Built a lightweight app where users can:
-
-Enter English → receive French
-
-Enter French → receive English
-
-See processing (tokenization → model inference → decoding)
-
-🔹 4. High Translation Accuracy
-
-Achieved 93% BLEU score on English→French test data
-
-Fluent, context-aware, and grammatically consistent translations
+### **4. High Accuracy**
+- Achieved **93% BLEU score** on English→French test data  
+- Strong fluency and context understanding
