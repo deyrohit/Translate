@@ -1,4 +1,4 @@
-# 🌐 **Transformer-Based English ↔ French Translation Model **
+# 🌐 **Transformer-Based English ↔ French Translation Model**
 
 A fully custom machine translation system built **from scratch** using a **causal Transformer architecture** in PyTorch.  
 Supports **English → French** and **French → English** translation with **93% accuracy** (BLEU-based).
